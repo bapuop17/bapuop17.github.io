@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - BapuOP AI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="animated-gradient-bg">
+
+  <div class="ambient-orb orb-1"></div>
+  <div class="ambient-orb orb-2"></div>
+  <div class="particle-container"></div>
+  <div class="cursor-glow"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">B</div>
+        <span>BapuOP AI</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="moon-icon" style="display:none; width: 18px; height: 18px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          <svg class="sun-icon" style="width: 18px; height: 18px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+        </button>
+        <a href="auth/login.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Login</a>
+        <a href="chat/chat.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Try Chat</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main style="padding-top: 8rem; position: relative; z-index: 10;">
+    <section class="container" style="max-width: 800px; margin-bottom: 8rem;">
+      <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Privacy Policy</h1>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Last Updated: June 26, 2026</p>
+      
+      <div class="dashboard-card" style="padding: 2.5rem 3rem; display: flex; flex-direction: column; gap: 1.5rem; line-height: 1.7; color: var(--text-secondary);">
+        <p>At BapuOP AI, we prioritize protecting your machine data and private settings. This policy describes how we secure your inputs when utilizing our web interfaces.</p>
+        
+        <h3 style="color: var(--text-primary); font-size: 1.15rem; margin-top: 1rem;">1. Safe Credentials Management</h3>
+        <p>Any API keys, passwords, or profile details configured within your personal workspace are written directly inside your local browser's <code>localStorage</code> sandbox. They are never transmitted, leaked, or visible to third-party tracking portals.</p>
+
+        <h3 style="color: var(--text-primary); font-size: 1.15rem; margin-top: 1rem;">2. Conversations & File Upload Processing</h3>
+        <p>Conversations context, including uploaded image file bytes and textual paragraphs, are processed directly via secure, end-to-end encrypted tunnels. We do not store or use your uploaded content to retrain generative models.</p>
+
+        <h3 style="color: var(--text-primary); font-size: 1.15rem; margin-top: 1rem;">3. Local Analytics</h3>
+        <p>We do not run tracking scripts. Metrics visible on your personal Bento Dashboard are compiled strictly from client-side caches and local API responses, preserving your ultimate privacy boundaries.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">B</div>
+            <span>BapuOP AI</span>
+          </a>
+          <p>Supercharging human creativity and analytical productivity through luxury machine intelligence.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="services.html">Services & APIs</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="chat/chat.html">Chat Playground</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-heading">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Company Blog</a></li>
+            <li><a href="faq.html">FAQ Portal</a></li>
+            <li><a href="about.html">Our Vision</a></li>
+            <li><a href="contact.html">Support Desk</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Workspace</h4>
+          <ul class="footer-links">
+            <li><a href="dashboard/dashboard.html">Admin Console</a></li>
+            <li><a href="dashboard/profile.html">User Profile</a></li>
+            <li><a href="dashboard/settings.html">System Settings</a></li>
+            <li><a href="/api/download-zip">Download ZIP</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <span>&copy; 2026 BapuOP AI Inc. Crafted with exquisite precision. All rights reserved.</span>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

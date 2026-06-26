@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans - BapuOP AI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="animated-gradient-bg">
+
+  <div class="ambient-orb orb-1"></div>
+  <div class="ambient-orb orb-2"></div>
+  <div class="particle-container"></div>
+  <div class="cursor-glow"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">B</div>
+        <span>BapuOP AI</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="moon-icon" style="display:none; width: 18px; height: 18px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          <svg class="sun-icon" style="width: 18px; height: 18px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+        </button>
+        <a href="auth/login.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Login</a>
+        <a href="chat/chat.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Try Chat</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Pricing Hero -->
+  <main style="padding-top: 8rem; position: relative; z-index: 10;">
+    <section class="container" style="text-align: center; margin-bottom: 5rem;">
+      <span class="reveal" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-primary); margin-bottom: 1rem; display: inline-block;">
+        TRANSPARENT VALUE
+      </span>
+      <h1 class="reveal reveal-delay-1" style="font-size: 3.5rem; margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+        Flexible Tiers, Infinite Scale
+      </h1>
+      <p class="reveal reveal-delay-2" style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 2.5rem; font-weight: 400;">
+        Choose the level of intelligence that aligns with your creative speed. Save up to 20% on our annual plans.
+      </p>
+
+      <!-- Toggle Billing Billing Switcher -->
+      <div class="reveal reveal-delay-3" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+        <span style="font-weight: 500; font-size: 0.95rem;">Monthly</span>
+        <label class="switch">
+          <input type="checkbox" id="pricing-billing-switch">
+          <span class="slider"></span>
+        </label>
+        <span style="font-weight: 500; font-size: 0.95rem;">Annually <span style="font-size: 0.75rem; color: #10b981; background: rgba(16,185,129,0.1); padding: 0.15rem 0.4rem; border-radius: 4px; margin-left: 0.25rem;">Save 20%</span></span>
+      </div>
+    </section>
+
+    <!-- Pricing Cards Grid -->
+    <section class="container" style="margin-bottom: 8rem;">
+      <div class="bento-grid">
+        
+        <!-- Starter Card -->
+        <div class="dashboard-card reveal-scale" style="justify-content: space-between; padding: 2rem;">
+          <div>
+            <div style="font-size: 1.2rem; font-weight: 700; color: var(--text-secondary);">Starter</div>
+            <div style="margin-top: 1rem; margin-bottom: 1.5rem;">
+              <span style="font-size: 3rem; font-weight: 800; font-family: var(--font-display);" class="pricing-val" data-monthly="0" data-annual="0">$0</span>
+              <span style="color: var(--text-muted); font-size: 0.9rem;">/month</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">For curious researchers exploring local neural spaces.</p>
+            
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+              <li style="font-size: 0.9rem; color: var(--text-secondary);">✓ Access to standard model models</li>
+              <li style="font-size: 0.9rem; color: var(--text-secondary);">✓ Standard response intervals</li>
+              <li style="font-size: 0.9rem; color: var(--text-secondary);">✓ Web client playground</li>
+              <li style="font-size: 0.9rem; color: var(--text-muted); text-decoration: line-through;">✗ Dedicated pipeline speeds</li>
+              <li style="font-size: 0.9rem; color: var(--text-muted); text-decoration: line-through;">✗ Advanced vision reasoning</li>
+            </ul>
+          </div>
+          <a href="chat/chat.html" class="btn btn-secondary" style="width: 100%; margin-top: 2rem;">Start Free</a>
+        </div>
+
+        <!-- Pro Card (Highlighted Glow) -->
+        <div class="dashboard-card reveal-scale glow-card-ring" style="justify-content: space-between; padding: 0; min-height: 460px;">
+          <div class="glow-card-ring-content" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 1.25rem; font-weight: 800; color: var(--accent-primary);">Professional</span>
+                <span style="font-size: 0.75rem; font-weight: bold; background: rgba(139,92,246,0.15); color: var(--accent-primary); padding: 0.25rem 0.5rem; border-radius: 4px;">MOST POPULAR</span>
+              </div>
+              <div style="margin-top: 1rem; margin-bottom: 1.5rem;">
+                <span style="font-size: 3rem; font-weight: 800; font-family: var(--font-display);" class="pricing-val" data-monthly="20" data-annual="16">$20</span>
+                <span style="color: var(--text-muted); font-size: 0.9rem;">/month</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">For expert developers, designers, and high-tier innovators.</p>
+              
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+                <li style="font-size: 0.9rem; color: var(--text-secondary);">✓ Access to premium logic pipelines</li>
+                <li style="font-size: 0.9rem; color: var(--text-secondary);">✓ Accelerated inference loops</li>
+                <li style="font-size: 0.9rem; color: var(--text-secondary);">✓ Advanced image vision processing</li>
+                <li style="font-size: 0.9rem; color: var(--text-secondary);">✓ Multi-file uploaded context loaders</li>
+                <li style="font-size: 0.9rem; color: var(--text-secondary);">✓ Full Vocal engine activation</li>
+              </ul>
+            </div>
+            <a href="auth/signup.html" class="btn btn-primary" style="width: 100%; margin-top: 2rem;">Upgrade to Pro</a>
+          </div>
+        </div>
+
+        <!-- Enterprise Card -->
+        <div class="dashboard-card reveal-scale" style="justify-content: space-between; padding: 2rem;">
+          <div>
+            <div style="font-size: 1.2rem; font-weight: 700; color: var(--text-secondary);">Enterprise</div>
+            <div style="margin-top: 1rem; margin-bottom: 1.5rem;">
+              <span style="font-size: 3rem; font-weight: 800; font-family: var(--font-display);">Custom</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">For enterprise organizations requiring massive bulk scaling.</p>
+            
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+              <li style="font-size: 0.9rem; color: var(--text-secondary);">✓ Custom fine-tuned private nodes</li>
+              <li style="font-size: 0.9rem; color: var(--text-secondary);">✓ SLA uptime guarantees</li>
+              <li style="font-size: 0.9rem; color: var(--text-secondary);">✓ Infinite bulk API rate endpoints</li>
+              <li style="font-size: 0.9rem; color: var(--text-secondary);">✓ Dedicated customer support engineer</li>
+              <li style="font-size: 0.9rem; color: var(--text-secondary);">✓ Shared multi-user logs workspace</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-secondary" style="width: 100%; margin-top: 2rem;">Contact Sales</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">B</div>
+            <span>BapuOP AI</span>
+          </a>
+          <p>Supercharging human creativity and analytical productivity through luxury machine intelligence.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="services.html">Services & APIs</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="chat/chat.html">Chat Playground</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-heading">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Company Blog</a></li>
+            <li><a href="faq.html">FAQ Portal</a></li>
+            <li><a href="about.html">Our Vision</a></li>
+            <li><a href="contact.html">Support Desk</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Workspace</h4>
+          <ul class="footer-links">
+            <li><a href="dashboard/dashboard.html">Admin Console</a></li>
+            <li><a href="dashboard/profile.html">User Profile</a></li>
+            <li><a href="dashboard/settings.html">System Settings</a></li>
+            <li><a href="/api/download-zip">Download ZIP</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <span>&copy; 2026 BapuOP AI Inc. Crafted with exquisite precision. All rights reserved.</span>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Simple script for interactive billing switch -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const switcher = document.getElementById('pricing-billing-switch');
+      const pricingVals = document.querySelectorAll('.pricing-val');
+
+      switcher.addEventListener('change', () => {
+        const isAnnual = switcher.checked;
+        pricingVals.forEach(val => {
+          const m = val.getAttribute('data-monthly');
+          const a = val.getAttribute('data-annual');
+          if (isAnnual) {
+            val.textContent = `$${a}`;
+          } else {
+            val.textContent = `$${m}`;
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

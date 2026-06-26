@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Blog - BapuOP AI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="animated-gradient-bg">
+
+  <div class="ambient-orb orb-1"></div>
+  <div class="ambient-orb orb-2"></div>
+  <div class="particle-container"></div>
+  <div class="cursor-glow"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">B</div>
+        <span>BapuOP AI</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="blog.html" class="nav-link active">Blog</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="moon-icon" style="display:none; width: 18px; height: 18px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          <svg class="sun-icon" style="width: 18px; height: 18px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+        </button>
+        <a href="auth/login.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Login</a>
+        <a href="chat/chat.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Try Chat</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Blog Hero -->
+  <main style="padding-top: 8rem; position: relative; z-index: 10;">
+    <section class="container" style="text-align: center; margin-bottom: 5rem;">
+      <span class="reveal" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-primary); margin-bottom: 1rem; display: inline-block;">
+        COMPANY DISPATCHES
+      </span>
+      <h1 class="reveal reveal-delay-1" style="font-size: 3.5rem; margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+        Inside Neural Research & Engineering
+      </h1>
+      <p class="reveal reveal-delay-2" style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-weight: 400;">
+        Stay updated with our research breakthroughs, user interface design decisions, and ecosystem announcements.
+      </p>
+    </section>
+
+    <!-- Editorial grid -->
+    <section class="container" style="margin-bottom: 8rem;">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;" class="bento-grid">
+        
+        <!-- Post 1 -->
+        <article class="dashboard-card reveal-scale" style="padding: 0; overflow: hidden; height: 100%; justify-content: space-between;">
+          <div style="background: rgba(139,92,246,0.1); height: 160px; display: flex; align-items: center; justify-content: center; font-size: 3rem; border-bottom: 1px solid var(--border-color);">🎨</div>
+          <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
+            <div style="display: flex; gap: 0.5rem; font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">
+              <span>RESEARCH</span>
+              <span>•</span>
+              <span>JUNE 25, 2026</span>
+            </div>
+            <h3 style="font-size: 1.2rem; line-height: 1.35; margin-bottom: 0.5rem;">Symmetric Typography in AI interfaces</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">How Inter and Space Grotesk pairing optimizes structural scan intervals on long markdown queries.</p>
+          </div>
+          <div style="padding: 1.5rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.85rem; color: var(--accent-primary); font-weight: 600;">Read Article →</span>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="dashboard-card reveal-scale" style="padding: 0; overflow: hidden; height: 100%; justify-content: space-between;">
+          <div style="background: rgba(59,130,246,0.1); height: 160px; display: flex; align-items: center; justify-content: center; font-size: 3rem; border-bottom: 1px solid var(--border-color);">🛡️</div>
+          <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
+            <div style="display: flex; gap: 0.5rem; font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">
+              <span>ENGINEERING</span>
+              <span>•</span>
+              <span>JUNE 18, 2026</span>
+            </div>
+            <h3 style="font-size: 1.2rem; line-height: 1.35; margin-bottom: 0.5rem;">Client-side Security & Sandboxed Keys</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">How BapuOP AI utilizes local-storage state isolation to preserve custom credential privacy in static spaces.</p>
+          </div>
+          <div style="padding: 1.5rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.85rem; color: var(--accent-primary); font-weight: 600;">Read Article →</span>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="dashboard-card reveal-scale" style="padding: 0; overflow: hidden; height: 100%; justify-content: space-between;">
+          <div style="background: rgba(244,114,182,0.1); height: 160px; display: flex; align-items: center; justify-content: center; font-size: 3rem; border-bottom: 1px solid var(--border-color);">🚀</div>
+          <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
+            <div style="display: flex; gap: 0.5rem; font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">
+              <span>RELEASES</span>
+              <span>•</span>
+              <span>JUNE 10, 2026</span>
+            </div>
+            <h3 style="font-size: 1.2rem; line-height: 1.35; margin-bottom: 0.5rem;">Announcing BapuOP v2.5 Architecture</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Introducing multi-modal visual document loaders, microphone integrations, and complete offline ZIP builds.</p>
+          </div>
+          <div style="padding: 1.5rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.85rem; color: var(--accent-primary); font-weight: 600;">Read Article →</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">B</div>
+            <span>BapuOP AI</span>
+          </a>
+          <p>Supercharging human creativity and analytical productivity through luxury machine intelligence.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="services.html">Services & APIs</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="chat/chat.html">Chat Playground</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-heading">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Company Blog</a></li>
+            <li><a href="faq.html">FAQ Portal</a></li>
+            <li><a href="about.html">Our Vision</a></li>
+            <li><a href="contact.html">Support Desk</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Workspace</h4>
+          <ul class="footer-links">
+            <li><a href="dashboard/dashboard.html">Admin Console</a></li>
+            <li><a href="dashboard/profile.html">User Profile</a></li>
+            <li><a href="dashboard/settings.html">System Settings</a></li>
+            <li><a href="/api/download-zip">Download ZIP</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <span>&copy; 2026 BapuOP AI Inc. Crafted with exquisite precision. All rights reserved.</span>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
