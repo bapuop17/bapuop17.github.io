@@ -1,0 +1,179 @@
+/*
+ * BapuOP AI - Responsive Stylesheet
+ * Standard media queries for responsive typography, mobile layouts, and sidebars
+ */
+
+/* Medium Devices (Tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  
+  /* Bento layouts on dashboard */
+  .bento-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .bento-col-2 {
+    grid-column: span 2;
+  }
+}
+
+/* Small Devices (Mobile, less than 768px) */
+@media (max-width: 767.98px) {
+  html {
+    font-size: 14px;
+  }
+
+  /* Navigation menu mobile toggling */
+  .mobile-nav-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--bg-secondary);
+    border-left: 1px solid var(--border-color);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6rem 2rem 2rem;
+    gap: 1.5rem;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+  }
+
+  .nav-menu.open {
+    right: 0;
+  }
+
+  .nav-actions {
+    margin-right: 2.5rem;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  /* Chat Page Sidebar Mobile Toggle */
+  .chat-wrapper {
+    position: relative;
+  }
+
+  .chat-sidebar {
+    position: absolute;
+    top: 0;
+    left: -260px;
+    height: 100%;
+    z-index: 1002;
+  }
+
+  .chat-sidebar.open {
+    transform: translateX(260px);
+  }
+
+  /* Overlay for when mobile sidebar is open */
+  .chat-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1001;
+  }
+
+  .chat-overlay.active {
+    display: block;
+  }
+
+  /* Show mobile toggle inside Chat headers */
+  .mobile-chat-toggle {
+    display: flex !important;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+
+  /* Dashboard grids */
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-col-2, .bento-col-3 {
+    grid-column: span 1;
+  }
+
+  .dashboard-sidebar {
+    position: absolute;
+    left: -260px;
+    z-index: 1002;
+    transition: transform 0.3s ease;
+  }
+
+  .dashboard-sidebar.open {
+    transform: translateX(260px);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group-full {
+    grid-column: span 1;
+  }
+
+  .profile-avatar-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+/* Extra Small Devices (Portrait Phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .suggestion-card {
+    grid-column: span 2;
+  }
+  
+  .chat-input-box {
+    padding: 0.5rem;
+  }
+  
+  .chat-textarea {
+    font-size: 0.9rem;
+  }
+  
+  .badge-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .social-buttons-grid {
+    grid-template-columns: 1fr;
+  }
+}

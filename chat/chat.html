@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Workspace - BapuOP AI</title>
+  
+  <!-- Stylesheets (Using relative paths out of /chat/) -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/chat.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- Chat Page Overlay for Mobile sidebar -->
+  <div class="chat-overlay"></div>
+
+  <!-- Main Chat Workspace Layout -->
+  <div class="chat-wrapper">
+    
+    <!-- Sidebar component -->
+    <aside class="chat-sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo" style="font-size: 1.15rem;">
+          <div class="logo-icon" style="width: 24px; height: 24px; font-size: 0.85rem;">B</div>
+          <span>BapuOP AI</span>
+        </a>
+      </div>
+      
+      <div style="padding: 0.75rem 0.75rem 0;">
+        <button class="new-chat-btn" id="new-chat-btn">
+          <span>+ New Conversation</span>
+        </button>
+      </div>
+
+      <!-- Scrollable conversations history -->
+      <div class="sidebar-history" id="sidebar-history">
+        <!-- Will be dynamically loaded by chat.js -->
+        <div style="text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: 2rem;">No Saved Chats</div>
+      </div>
+
+      <div class="sidebar-footer">
+        <!-- Settings Link -->
+        <a href="../dashboard/dashboard.html" class="history-item" style="padding: 0.5rem 0.75rem;">
+          <span>📊 Admin Console</span>
+        </a>
+        <a href="../dashboard/settings.html" class="history-item" style="padding: 0.5rem 0.75rem;">
+          <span>⚙️ Settings Workspace</span>
+        </a>
+        <a href="../index.html" class="history-item" style="padding: 0.5rem 0.75rem;">
+          <span>🏠 Return to Portal</span>
+        </a>
+        
+        <!-- Active User widget -->
+        <a href="../dashboard/profile.html" class="sidebar-user">
+          <div class="sidebar-user-avatar">U</div>
+          <div style="display:flex; flex-direction:column; overflow:hidden;">
+            <span class="dashboard-user-name" style="font-size: 0.85rem; font-weight:600; white-space:nowrap; text-overflow:ellipsis;">Guest User</span>
+            <span style="font-size:0.75rem; color:var(--text-muted); white-space:nowrap; text-overflow:ellipsis;">Standard Account</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Chat panel content -->
+    <main class="chat-container">
+      
+      <!-- Top header strip -->
+      <div class="chat-header">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <!-- Mobile sidebar toggle trigger hamburger -->
+          <button class="mobile-chat-toggle" style="display:none; font-size: 1.5rem;" aria-label="Toggle sidebar">☰</button>
+          
+          <div class="chat-model-info">
+            <span style="font-weight:600; font-family: var(--font-display); font-size: 1rem;">BapuOP Neural Core</span>
+            <span class="model-badge">v2.5-PRO</span>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:0.5rem;">
+          <!-- Theme selector inside chat -->
+          <button class="theme-toggle-btn" aria-label="Toggle theme" style="padding:0.4rem;">
+            <svg class="moon-icon" style="display:none; width: 16px; height: 16px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            <svg class="sun-icon" style="width: 16px; height: 16px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+          </button>
+          <a href="history.html" class="history-item" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; background: rgba(255,255,255,0.02); border-radius: 6px;">Logs View</a>
+        </div>
+      </div>
+
+      <!-- Scrollable Message list -->
+      <div class="chat-messages" id="chat-messages">
+        
+        <!-- Welcome empty state screen (Visible when starting new chat) -->
+        <div class="chat-welcome" id="chat-welcome">
+          <div class="welcome-icon">B</div>
+          <h2 style="font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 0.5rem;">How can BapuOP assist you?</h2>
+          <p style="color:var(--text-secondary); font-size: 0.95rem;">Ask complex questions, upload data contexts, or command voice-driven tasks instantly.</p>
+          
+          <!-- Suggestion Cards grid -->
+          <div class="chat-suggestions">
+            <div class="suggestion-card">
+              <h4>🎨 UI Styling Advice</h4>
+              <p>Analyze Space Grotesk display parameters on mobile screens.</p>
+            </div>
+            <div class="suggestion-card">
+              <h4>🛡️ local-storage Isolation</h4>
+              <p>Explain how static sandboxing guarantees credential privacy.</p>
+            </div>
+            <div class="suggestion-card">
+              <h4>🛰️ Dynamic bar charts</h4>
+              <p>Show me an elegant pure CSS responsive gauge template.</p>
+            </div>
+            <div class="suggestion-card">
+              <h4>⚡ Premium Inference</h4>
+              <p>Why do accelerated pipelines elevate dialogue flows?</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Chat input submission bar -->
+      <div class="chat-input-container">
+        <div class="chat-input-box">
+          
+          <!-- Image upload previews row -->
+          <div class="upload-preview-container" id="upload-preview"></div>
+          
+          <!-- Microphone waveforms -->
+          <div class="voice-wave-container" id="voice-waves" style="display:none;">
+            <span style="font-size: 0.8rem; color:var(--accent-primary); font-weight:600; margin-right: 0.5rem;">Vocal Streaming:</span>
+            <div class="voice-wave"></div>
+            <div class="voice-wave"></div>
+            <div class="voice-wave"></div>
+            <div class="voice-wave"></div>
+          </div>
+
+          <!-- Main Input row -->
+          <div class="chat-input-row">
+            <!-- Hidden inputs -->
+            <input type="file" id="hidden-file-input" style="display:none;" accept="image/*,text/*,application/pdf" multiple>
+            
+            <textarea class="chat-textarea" id="chat-textarea" placeholder="Send a message to BapuOP AI... (or drop assets here)"></textarea>
+            
+            <!-- Controls left -->
+            <div class="chat-actions">
+              <div class="chat-actions-left">
+                <!-- Attach button -->
+                <button class="chat-tool-btn" id="upload-file-btn" title="Attach assets (images/texts/pdfs)">
+                  📎
+                </button>
+                <!-- Voice button -->
+                <button class="chat-tool-btn" id="voice-input-btn" title="Vocal Dictation">
+                  🎤
+                </button>
+              </div>
+              
+              <!-- Send button -->
+              <button class="chat-send-btn" id="chat-send-btn" aria-label="Send message">
+                ➔
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Core Scripts -->
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/voice.js"></script>
+  <script src="../js/upload.js"></script>
+  <script src="../js/chat.js"></script>
+
+  <!-- Sync user name instantly -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedName = localStorage.getItem('bapuop_user_name') || 'Guest User';
+      const widgets = document.querySelectorAll('.dashboard-user-name');
+      widgets.forEach(w => w.textContent = savedName);
+    });
+  </script>
+</body>
+</html>

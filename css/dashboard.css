@@ -1,0 +1,418 @@
+/*
+ * BapuOP AI - Dashboard Stylesheet
+ * Custom styling for dashboard analytics, profiles, and settings interfaces
+ */
+
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+}
+
+/* Dashboard Sidebar - identical or cohesive with Chat */
+.dashboard-sidebar {
+  width: 260px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dashboard-logo {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard-menu {
+  flex: 1;
+  padding: 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dashboard-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.dashboard-menu-item:hover, .dashboard-menu-item.active {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+}
+
+.dashboard-menu-item.active {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent-primary);
+  border-left: 3px solid var(--accent-primary);
+}
+
+/* Dashboard main panel scrollable */
+.dashboard-content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.dashboard-header {
+  height: 70px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: var(--bg-secondary);
+}
+
+.dashboard-user-widget {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dashboard-user-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Bento Grid and Dashboard Cards */
+.dashboard-main-content {
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.welcome-widget {
+  margin-bottom: 2rem;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.bento-col-2 {
+  grid-column: span 2;
+}
+
+.bento-col-3 {
+  grid-column: span 3;
+}
+
+/* Card layout */
+.dashboard-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Metrics widgets */
+.metric-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.metric-number {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.metric-trend {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.trend-positive { color: #10b981; }
+.trend-negative { color: #ef4444; }
+
+/* Custom Charts */
+.chart-container {
+  height: 250px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.chart-bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.chart-bar-fill {
+  width: 60%;
+  max-width: 40px;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(to top, var(--accent-secondary), var(--accent-primary));
+  transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.chart-bar-fill:hover {
+  filter: brightness(1.15);
+}
+
+.chart-bar-fill:hover::after {
+  content: attr(data-value);
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.chart-bar-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Key values list (API keys, settings etc) */
+.data-table-container {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.data-table th, .data-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.data-table td {
+  font-size: 0.9rem;
+}
+
+.api-key-hash {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Forms in settings/profile */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group-full {
+  grid-column: span 2;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.75rem;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.form-control:focus {
+  border-color: var(--accent-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Settings model-toggle card */
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.toggle-row:last-child {
+  border-bottom: none;
+}
+
+.toggle-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-label {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.toggle-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Toggle switch component */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-tertiary);
+  transition: .3s;
+  border-radius: 24px;
+  border: 1px solid var(--border-color);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--accent-primary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Profile cards and badges */
+.profile-avatar-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.badge-card {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge-icon {
+  font-size: 1.5rem;
+}
+
+.badge-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-status {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

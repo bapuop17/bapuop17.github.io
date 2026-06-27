@@ -1,0 +1,203 @@
+/*
+ * BapuOP AI - CSS Animations
+ * Gradient shifts, floating elements, scrolling effects, and typing cursors
+ */
+
+/* Gradient background shift animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-bg {
+  background: linear-gradient(-45deg, #050505, #080d1a, #030305, #07122e, #040407);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+:root.light .animated-gradient-bg {
+  background: linear-gradient(-45deg, #f4f7ff, #ecf2ff, #fafafa, #eff4ff, #f3f4f6);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Float particles animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(50px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  background: radial-gradient(circle, var(--accent-primary) 0%, rgba(59, 130, 246, 0) 70%);
+  border-radius: 50%;
+  opacity: 0;
+  animation: floatUp 12s linear infinite;
+  pointer-events: none;
+}
+
+/* Shimmer / pulse effects */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(59, 130, 246, 0.45);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Typing / writing cursor */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.typing-cursor {
+  border-right: 2px solid var(--accent-primary);
+  animation: blink 0.75s step-end infinite;
+}
+
+/* Fade-in Scroll Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
+
+/* Scale Reveal for Bento Grids */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-scale.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Floating orb animation */
+@keyframes floatingOrb {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+.ambient-orb {
+  position: absolute;
+  filter: blur(100px);
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.35;
+  pointer-events: none;
+  mix-blend-mode: plus-lighter;
+}
+
+:root.light .ambient-orb {
+  opacity: 0.15;
+  mix-blend-mode: multiply;
+}
+
+.orb-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--accent-primary);
+  top: -100px;
+  right: -50px;
+  animation: floatingOrb 18s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-secondary);
+  bottom: 100px;
+  left: -100px;
+  animation: floatingOrb 22s ease-in-out infinite alternate;
+}
+
+/* Rotate Glow Ring */
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.glow-card-ring {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-card-ring::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, var(--accent-primary), transparent 30%, transparent, var(--accent-secondary), transparent 80%);
+  animation: rotateGlow 8s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.glow-card-ring:hover::before {
+  opacity: 0.6;
+}
+
+.glow-card-ring-content {
+  position: relative;
+  z-index: 1;
+  background: var(--bg-secondary);
+  border-radius: inherit;
+  height: 100%;
+}
